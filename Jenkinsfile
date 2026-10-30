@@ -8,7 +8,7 @@ pipeline {
 
   environment {
     // Set these in Jenkins job configuration or replace with Jenkins credentials.
-    IMAGE_NAME = 'dockerhubjaysoorya/devops-capstone-nodejs'
+    IMAGE_NAME = 'jaysoorya/devops-capstone-nodejs'
     APP_HOST = 'EC2_PUBLIC_IP_OR_DNS'
     APP_USER = 'ubuntu'
     SSH_CREDENTIALS_ID = 'ec2-ssh-key'
