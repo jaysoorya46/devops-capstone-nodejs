@@ -1,0 +1,12 @@
+flowchart TD
+    A[Developer] --> B[GitHub Repository]
+    B --> C[Jenkins Pipeline on EC2]
+    C --> D[Checkout and Test]
+    D --> E[Build Docker Image]
+    E --> F[Push Image to Docker Hub]
+    F --> G[SSH Deploy to App EC2]
+    G --> H[Node.js Container :3000]
+    H --> I[/health and /metrics]
+    I --> J[Prometheus]
+    J --> K[Grafana Dashboard]
+    G --> L[Bash Backup + Cron]

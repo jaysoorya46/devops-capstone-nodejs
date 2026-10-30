@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: devops-capstone-app
+    metrics_path: /metrics
+    static_configs:
+      # On the EC2 host, Docker publishes the app port to host port 3000.
+      - targets: ['host.docker.internal:3000']
+    relabel_configs: []
